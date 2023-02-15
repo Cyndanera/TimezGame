@@ -1,0 +1,126 @@
+struct_root {
+    Player* player[6];
+	
+	struct_player {
+	    char name[11];
+		u32 version;
+		Game* gameSession[4]; // mul, div, add, sub
+		
+		struct_gameSession {
+		    u32 gender; // ( 0 = male, 1 = female )
+			f32 totalGameTime;
+			f32 baseAnswerTime;
+			f32 retentionBaseAnswerTime;
+			u32 retentionDifficulty;
+			u32 retryPercentage;
+			u32 retriesPerFact;
+			u32 missesAllowed;
+			u32 grade;
+			u32 playedBefore;
+			u32 currentWorld;
+			u32 numberPassed;
+			u32 levelTries;
+			u32 checkpoint;
+			u32 round;
+			u32 retentionFactData[12][12];
+			u32 correctInARowData[12][12];
+			u32 factOrderData[6][12];
+			u32 currentFactData[12][2];
+			
+			Options* options;
+			BasketsPerLevel* basketsPerLevel;
+			Powerups* powerups;
+            LevelEntity* levels[5];
+			LevelRetentionEntity* retentionLevels[5];
+			Repeat* repeat;
+			Timeser* timeser[12];
+			DigitEntity* typeTest;
+			DigitEntity* currentAverage;
+			DigitEntity* levelDigits[6];
+			RetentionWorldData* retentionWorldData;
+			PretestData* pretestData;
+			posttestData* posttestData;
+			
+			struct_options {
+	            u32 width;
+		        u32 height;
+		        u32 fullscreen;
+		        u32 mode;
+		        u32 easycamera;
+		        u32 volume;
+		        u32 brightness;
+	        };
+			
+			struct_basketsPerLevel {
+			    u32 level[6];
+				u32 gender;
+			};
+			
+			struct_powerups {
+			    u32 powers;
+				u32 current;
+				u32 extraPowers;
+				u32 date;
+				u32 locked;
+			};
+			
+			struct_levelEntity {
+			    u32 basket[5];
+				f32 avgPerFact;
+			};
+			
+			struct_retentionLevelEntity {
+			    u32 totalTime;
+				f32 avgPerFact;
+			};
+			
+			struct_repeat {
+			    u32 timeser;
+				u32 numtimesees;
+				u32 basketMarker;
+				u32 miniMarker;
+				u32 rdata[4];
+			};
+			
+			struct_timeserEntity {
+			    Timesee* timesee[12];
+				
+			    struct_timesee {
+			        u32 att;
+				    u32 succ;
+				    u32 fin;
+				    u32 avg;
+				    u32 retAvg;
+				};
+			};
+			
+			// Typing Speed
+			struct_digitEntity {
+			    f32 firstDigit;
+				f32 secondDigit;
+			};
+			
+			struct_RetentionWorldData {
+			    u32 active;
+				u32 tries;
+				u32 recycleWorld;
+				s32 totalMissed;
+				u32 factData[12][2];
+			};
+			
+			struct_pretestData {
+			    u32 finished;
+			    u32 skipped;
+			    u32 timeserData[12][12];
+			};
+			
+			struct_posttestData {
+			    u32 finished;
+			    u32 date;
+			    u32 timeserData[12][12];
+			};
+		};
+		
+		u64 checksum; // craHash-64
+	};
+};

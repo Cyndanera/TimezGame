@@ -1,0 +1,11 @@
+phase_1 = launcher
+phase_2 = distribution
+phase_3 = title
+phase_3.5 = main
+phase_4 = pretest, factory
+phase_4.5 = progress
+phase_5 = jungle ruins
+phase_6 = desert temple
+phase_7 = posttest, retention
+phase_8 = aquatic base
+phase_9 = crystal caves
