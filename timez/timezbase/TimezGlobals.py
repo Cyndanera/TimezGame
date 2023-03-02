@@ -1,0 +1,11 @@
+MUSIC_MODE_NONE = 0
+MUSIC_MODE_TITLE = 1
+MUSIC_MODE_WALK = 2
+MUSIC_MODE_BOSS = 3
+MUSIC_MODE_BASKET = 4
+MUSIC_MODE_PREP = 5
+MUSIC_MODE_FINAL = 6
+basketBossTest = False
+nameRetention = 'retention'
+currentWorld = nameRetention
+musicMode = MUSIC_MODE_NONE

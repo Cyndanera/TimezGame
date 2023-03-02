@@ -1,6 +1,7 @@
 from timez.timezbase import TZLocalizer
 from timez.world.SpecImports import *
-RetentionReviewEntities = {1000: {'type': 'levelMgr',
+
+RetEntities = {1000: {'type': 'levelMgr',
         'name': 'LevelMgr',
         'comment': '',
         'parentEntId': 0,},
@@ -11,11 +12,3 @@ RetentionReviewEntities = {1000: {'type': 'levelMgr',
         'removeEntity': None,
         'requestNewEntity': None,
         'requestSave': None}}
-
-Retention1Entities = {}
-
-Retention2Entities = {}
-
-Retention3Entities = {}
-
-Retention4Entities = {}
