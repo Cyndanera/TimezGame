@@ -1,5 +1,5 @@
 # This is the PRC configuration file for public
-# Client settings
+# Game settings
 window-title Timez Clash
 sync-video #t
 texture-anisotropic-degree 16
